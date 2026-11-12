@@ -1,13 +1,202 @@
-.intro { padding: 8px 8px 16px; }
-.intro h1 { font-size: 1.6rem; font-weight: 750; margin-bottom: 8px; }
-.intro p, .nota { color: var(--ion-color-medium); line-height: 1.5; }
-ion-card { border-radius: 16px; margin: 0 0 16px; }
-ion-card-title { font-size: 1.1rem; }
-ion-button { margin-top: 12px; }
-ion-badge { margin: 5px 0 12px; padding: 8px 12px; }
-.medida { display: flex; justify-content: space-between; gap: 8px; margin: 20px 0 9px; }
-.medida strong { font-variant-numeric: tabular-nums; }
-ion-progress-bar { height: 10px; border-radius: 8px; }
-.numero { text-align: center; font-size: 2.6rem; font-weight: 800; margin: 12px 0; }
-.numero small { font-size: 1rem; }
-.nota { font-size: .85rem; text-align: center; padding-bottom: 16px; }
+
+/* ========================================
+   SENSORLAB - DARK NEON THEME
+======================================== */
+
+/* FONDO GENERAL */
+ion-content {
+  --background: #081326;
+  color: #f1f5ff;
+}
+
+/* BARRA SUPERIOR */
+ion-toolbar {
+  --background: linear-gradient(100deg, #4059e8, #2929bd);
+  --color: #ffffff;
+  --border-width: 0;
+  --min-height: 56px;
+}
+
+ion-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: -0.4px;
+}
+
+/* INTRODUCCIÓN */
+.intro {
+  padding: 22px 10px 26px;
+}
+
+.intro h1 {
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: -1px;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.intro p {
+  color: #9eacc7;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* TARJETAS */
+ion-card {
+  background: linear-gradient(145deg, #14223b, #101b30);
+  border: 1px solid #263f64;
+  border-radius: 20px;
+  margin: 0 0 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+ion-card-header {
+  padding: 20px 20px 12px;
+}
+
+ion-card-content {
+  padding: 10px 20px 22px;
+}
+
+ion-card-title {
+  color: #f5f7ff;
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+}
+
+ion-card-subtitle {
+  color: #8295b5;
+}
+
+/* ESTADO DEL SENSOR */
+ion-badge {
+  margin: 8px 0 14px;
+  padding: 9px 14px;
+  border-radius: 30px;
+  background: rgba(0, 207, 177, 0.13);
+  color: #35f0d0;
+  border: 1px solid rgba(0, 207, 177, 0.25);
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+/* BOTONES */
+ion-button {
+  margin-top: 14px;
+  min-height: 49px;
+  --border-radius: 11px;
+  font-weight: 800;
+  font-size: 0.95rem;
+  text-transform: none;
+  letter-spacing: 0.2px;
+  --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* BOTÓN INICIAR */
+ion-button[color="success"] {
+  --background: linear-gradient(100deg, #06b9c7, #0cbd83);
+  --background-hover: #0cbd83;
+  --color: #ffffff;
+}
+
+/* BOTÓN DETENER */
+ion-button[color="danger"] {
+  --background: linear-gradient(100deg, #c536b4, #ed2450);
+  --background-hover: #ed2450;
+  --color: #ffffff;
+}
+
+/* MEDICIONES */
+.medida {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin: 23px 0 10px;
+  color: #dce6fa;
+  font-size: 0.9rem;
+}
+
+.medida strong {
+  color: #ffffff;
+  font-weight: 850;
+  font-variant-numeric: tabular-nums;
+}
+
+/* BARRAS DE PROGRESO */
+ion-progress-bar {
+  height: 10px;
+  border-radius: 20px;
+  overflow: hidden;
+  --background: #263650;
+  --progress-background: #05c5d5;
+}
+
+/* COLORES DE LOS EJES */
+ion-progress-bar[color="primary"] {
+  --progress-background: #00c8d8;
+}
+
+ion-progress-bar[color="secondary"] {
+  --progress-background: #3988ff;
+}
+
+ion-progress-bar[color="tertiary"] {
+  --progress-background: #9639ed;
+}
+
+/* MAGNITUD TOTAL */
+.numero {
+  text-align: center;
+  font-size: 3.3rem;
+  font-weight: 900;
+  letter-spacing: -2px;
+  margin: 20px 0;
+  color: #a77bff;
+  font-variant-numeric: tabular-nums;
+  text-shadow: 0 0 22px rgba(147, 87, 255, 0.3);
+}
+
+.numero small {
+  font-size: 1rem;
+  color: #b69aff;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+/* NOTAS */
+.nota {
+  color: #8495b1;
+  font-size: 0.84rem;
+  line-height: 1.6;
+  text-align: center;
+  padding: 8px 12px 18px;
+}
+
+/* TRANSICIONES */
+ion-card,
+ion-button {
+  transition: all 0.25s ease;
+}
+
+ion-button:active {
+  transform: scale(0.98);
+}
+
+/* RESPONSIVE */
+@media (max-width: 576px) {
+  .intro h1 {
+    font-size: 1.75rem;
+  }
+
+  ion-card {
+    border-radius: 17px;
+  }
+
+  .numero {
+    font-size: 2.9rem;
+  }
+}
